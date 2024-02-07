@@ -1,9 +1,11 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #EEF0F4;
+    background-color: rgb(222, 215, 189);
     font-size: 20px;
+    color: #432000;
+    user-select: none;
 }
 #container {
     display: flex;
@@ -15,14 +17,15 @@ body {
 img {
     width: 150px;
     margin: 0 auto;
-    border-radius: 2px;
+    background-color: transparent;
 }
 input {
     padding: 15px;
     margin: 10px 0px;
     border: none;
-    background-color: #DCE1EB;
+    background-color: #FFECC7;
     border-radius: 10px;
+    text-align: center;
 }
 button {
     padding: 15px;
@@ -30,6 +33,11 @@ button {
     background-color: #AC485A;
     border: none;
     border-radius: 10px;
+    color: white;
+}
+button:hover {
+    background-color: #432000;
+    cursor: pointer;
 }
 ul {
     display: flex;
@@ -45,4 +53,8 @@ ul li {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
     flex-grow: 1;
+}
+ul li:hover {
+    background-color: #FFECC7;
+    cursor: pointer;
 }
