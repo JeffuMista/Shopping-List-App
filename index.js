@@ -12,13 +12,29 @@ const addBtn = document.getElementById("add-btn");
 const inputEl = document.getElementById("input-el")
 const shoppingListEl = document.getElementById("shopping-list")
 
-
 addBtn.addEventListener("click", function() {
     let inputValue = inputEl.value
-    
-    push(shoppingListInDB, inputValue)
+    if (inputValue === "") {
+        return shoppingListInDB
+    } else {
+        push(shoppingListInDB, inputValue)
 
-    clearInput()
+        clearInput()
+    }
+    
+    
+})
+
+inputEl.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        let inputValue = inputEl.value
+        if (inputValue === "") {
+            return shoppingListInDB
+        } else {
+            push(shoppingListInDB, inputValue)
+            clearInput()
+        }
+    }
 })
 
 onValue(shoppingListInDB, function(snapshot) {
